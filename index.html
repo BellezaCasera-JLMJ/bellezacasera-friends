@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetas Caseras - Cuidado Corporal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-leaf"></i> Recetas Caseras</h1>
+            <nav>
+                <button id="menu-btn"><i class="fas fa-bars"></i></button>
+                <ul id="nav-menu">
+                    <li><a href="#" class="active" data-category="todas">Todas</a></li>
+                    <li><a href="#" data-category="piel">Piel</a></li>
+                    <li><a href="#" data-category="labios">Labios</a></li>
+                    <li><a href="#" data-category="cabello">Cabello</a></li>
+                    <li><a href="#" data-category="mascarillas">Mascarillas</a></li>
+                    <li><a href="#" data-category="manos">Manos</a></li>
+                    <li><a href="#" data-category="nutricion">Nutrición</a></li>
+                    <li><a href="#" data-category="bienestar">Bienestar</a></li>
+                    <li><a href="#" id="favoritos-btn"><i class="fas fa-heart"></i> Favoritos</a></li>
+                    <li><a href="#" id="config-btn"><i class="fas fa-cog"></i> Configuración</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="recetas-container" class="recetas-grid">
+            <!-- Las recetas se cargarán dinámicamente aquí -->
+        </section>
+    </main>
+
+    <!-- Modal Detalle Receta -->
+    <div id="modal-receta" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="detalle-receta"></div>
+        </div>
+    </div>
+
+    <!-- Modal Favoritos -->
+    <div id="modal-favoritos" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mis Recetas Favoritas</h2>
+            <div id="favoritos-container"></div>
+        </div>
+    </div>
+
+    <!-- Modal Configuración -->
+    <div id="modal-config" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Configuración</h2>
+            <div class="config-options">
+                <div class="config-item">
+                    <label for="theme">Tema:</label>
+                    <select id="theme">
+                        <option value="light">Claro</option>
+                        <option value="dark">Oscuro</option>
+                    </select>
+                </div>
+                <div class="config-item">
+                    <label for="notifications">Notificaciones:</label>
+                    <input type="checkbox" id="notifications">
+                </div>
+                <div class="config-item">
+                    <label for="language">Idioma:</label>
+                    <select id="language">
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                        <option value="zh">中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                    </select>
+                </div>
+                <button id="save-config">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
